@@ -138,10 +138,110 @@ URL: https://code.google.com/p/io-2012-slides
   <slide>
     <hgroup>
       <h2>Tech Stack</h2>
-      <h3></h3>
     </hgroup>
     <article class="text-center">
       <img class="reflect" style="height: 500px; margin-left: -60px" src="images/techstack.jpg">
+    </article>
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>Whitelabel and Customization</h2>
+    </hgroup>
+    <article>
+        <ul>
+            <li>Architecture diagram (KASKUS Chat & BCA)</li>
+            <li>Screenshots(?)</li>
+        </ul>
+    </article>
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>Nature of Real Time Communication</h2>
+    </hgroup>
+    <article>
+        <ul>
+          <li>Architecture diagram (KASKUS Chat & BCA)</li>
+          <li>Screenshots(?)</li>
+        </ul>
+    </article>
+  </slide>
+
+  <slide class="segue dark quote nobackground">
+    <aside class="gdbar right bottom"><img src="images/gdp_labs_tiny.png"></aside>
+    <article class="flexbox vleft auto-fadein">
+      <q>
+        Real-time communications (RTC) is any mode of telecommunications in which all users can exchange information instantly or with negligible latency.
+      </q>
+      <div class="author">
+        Anonymous
+      </div>
+    </article>
+    <aside class="note">
+      <section>
+        <ul>
+          <li>to begin this, I'd like to quote a friend of mine</li>
+        </ul>
+      </section>
+    </aside>
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>Real Time</h2>
+    </hgroup>
+    <article>
+        <ul>
+          <li>No transmission delay</li>
+          <li>Short span of users attention</li>
+          <li>Asynchronous</li>
+        </ul>
+    </article>
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>Real Time</h2>
+    </hgroup>
+    <article class="no-margin-top xml">
+        <pre class="prettyprint" style="width: 500px; left:0">
+&lt;?xml version='1.0'&gt;
+  &lt;stream:stream to='discovery.nasa.guv'
+  xmlns='jabber:client'
+  xmlns:stream='http://etherx.jabber.org/streams'
+  version='1.0'&gt;
+&lt;/script&gt;
+</pre>
+        <pre class="prettyprint" style="width: 500px; margin-left: auto">
+&lt;?xml version='1.0'&gt;
+  &lt;stream:stream to='discovery.nasa.guv'
+  xmlns='jabber:client'
+  xmlns:stream='http://etherx.jabber.org/streams'
+  version='1.0'&gt;
+&lt;/script&gt;</pre>
+
+        <pre class="prettyprint" style="width: 500px; left:0">
+&lt;message from='DaveBowman@discovery.nasa.guv/pod&gt;
+  to='Hal@discovery.nasa.guv'
+  xml:lang='en'
+  &lt;body&gt;Hello, Hal. Do you read me, Hal?&lt;/body&gt;
+&lt;/message&gt;
+</pre>
+        <pre class="prettyprint" style="width: 500px; margin-left: auto">
+&lt;message from='Hal@discovery.nasa.guv/pod&gt;
+  to='Hal@discovery.nasa.guv'
+  xml:lang='en'
+  &lt;body&gt;Affirmative, Dave. I read you&lt;/body&gt;
+&lt;/message&gt;
+</pre>
+
+        <pre class="prettyprint" style="width: 500px; left:0">
+&lt;/stream:stream&gt;
+</pre>
+        <pre class="prettyprint" style="width: 500px; margin-left: auto">
+&lt;/stream:stream&gt;
+</pre>
     </article>
   </slide>
 
