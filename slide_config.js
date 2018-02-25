@@ -1,8 +1,8 @@
 var SLIDE_CONFIG = {
   // Slide settings
   settings: {
-    title: 'Game Developers Conference',
-    subtitle: 'sharing session',
+    title: 'Building Realtime<br/>Chat Application',
+    subtitle: 'Case Study: KASKUS Chat and HaloBCA Chat',
     /*eventInfo: {
       title: 'Google I/O',
       date: '6/x/2013'
@@ -12,7 +12,8 @@ var SLIDE_CONFIG = {
     enableSlideAreas: true, // Default: true. False turns off the click areas on either slide of the slides.
     enableTouch: true, // Default: true. If touch support should enabled. Note: the device must support touch.
     //analytics: 'UA-XXXXXXXX-1', // TODO: Using this breaks GA for some reason (probably requirejs). Update your tracking code in template.html instead.
-    favIcon: 'images/gdplabs_logo_tiny.png',
+    //favIcon: 'images/gdplabs_logo_tiny.png',
+    favIcon: 'images/gdpla.png',
     fonts: [
       'Open Sans:regular,semibold,italic,italicsemibold',
       'Source Code Pro'
@@ -22,14 +23,28 @@ var SLIDE_CONFIG = {
 
   // Author information
   presenters: [{
-    name: 'Glenn Kristanto',
-    company: 'GDP Labs',
+    name: 'Karol Danutama',
+    company: '',
     gplus: 'http://plus.google.com/1234567890',
     twitter: '@yourhandle',
     www: 'http://www.you.com',
     github: 'http://github.com/you'
   }, {
     name: 'Timotius Nugroho Chandra',
+    company: '',
+    gplus: 'http://plus.google.com/1234567890',
+    twitter: '@yourhandle',
+    www: 'http://www.you.com',
+    github: 'http://github.com/you'
+  }, {
+    name: '',
+    company: '',
+    gplus: 'http://plus.google.com/1234567890',
+    twitter: '@yourhandle',
+    www: 'http://www.you.com',
+    github: 'http://github.com/you'
+  }, {
+    name: 'Senior Principal SDE',
     company: 'GDP Labs',
     gplus: 'http://plus.google.com/1234567890',
     twitter: '@yourhandle',

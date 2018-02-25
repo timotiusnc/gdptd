@@ -341,6 +341,7 @@ SlideDeck.prototype.loadConfig_ = function(config) {
       if (p.company) {
         presenterTitle.push(p.company);
       }
+      //html = presenterTitle.join(' - ') + '<br>';
       html = presenterTitle.join(' - ') + '<br>';
 
       var gplus = p.gplus ? '<span>g+</span><a href="' + p.gplus +
@@ -363,7 +364,11 @@ SlideDeck.prototype.loadConfig_ = function(config) {
       }
     } else {
       for (var i = 0, p; p = presenters[i]; ++i) {
-        html.push(p.name + ' - ' + p.company);
+        if (p.company.length > 0) {
+          html.push(p.name + ' - ' + p.company);
+        } else {
+          html.push(p.name);
+        }
       }
       html = html.join('<br>');
       if (dataConfigContact) {
