@@ -1,0 +1,1242 @@
+<!--
+Google IO 2012/2013 HTML5 Slide Template
+
+Authors: Eric Bidelman <ebidel@gmail.com>
+         Luke Mahé <lukem@google.com>
+
+URL: https://code.google.com/p/io-2012-slides
+-->
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <!--<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">-->
+  <!--<meta name="viewport" content="width=device-width, initial-scale=1.0">-->
+  <!--This one seems to work all the time, but really small on ipad-->
+  <!--<meta name="viewport" content="initial-scale=0.4">-->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <link rel="stylesheet" media="all" href="theme/css/default.css">
+  <link rel="stylesheet" media="only screen and (max-device-width: 480px)" href="theme/css/phone.css">
+  <base target="_blank"> <!-- This amazingness opens all links in a new tab. -->
+  <script data-main="js/slides" src="js/require-1.0.8.min.js"></script>
+</head>
+<body style="opacity: 0">
+
+<slides class="">
+
+  <div id="includedContent"></div>
+
+  <slide class="logoslide nobackground">
+    <article class="flexbox vcenter">
+      <span><img src="images/gdp_labs.png"></span>
+    </article>
+  </slide>
+
+  <slide class="title-slide segue">
+    <!--<aside class="gdbar"><img src="images/google_developers_icon_128.png"></aside>-->
+    <!-- The content of this hgroup is replaced programmatically through the slide_config.json. -->
+    <img class="reflect img-header" src="images/bg_header.png">
+    <hgroup class="auto-fadein">
+      <h1 data-config-title><!-- populated from slide_config.json --></h1>
+      <h2 data-config-subtitle><!-- populated from slide_config.json --></h2>
+      <p data-config-presenter><!-- populated from slide_config.json --></p>
+      <!--<img class="gdp-labs-logo" src="images/gdp_labs.png">-->
+    </hgroup>
+    <aside class="note">
+      <section>
+        <ul>
+          <li>Say thanks to Pak Ruli and them for having you two there</li>
+          <li>We will share our experience on GDC 2014</li>
+        </ul>
+      </section>
+    </aside>
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>Introduction</h2>
+    </hgroup>
+    <article>
+      <ul class="no-style-list">
+        <li>Glenn Kristanto</li>
+        <li>Principal Software Engineer | GDP Labs</li>
+        <li><a href="http://id.linkedin.com/in/glennkristanto">http://id.linkedin.com/in/GlennKristanto</a></li>
+        <li>glenn.kristanto@gdplabs.id</li>
+      </ul>
+    </article>
+    <br>
+    <article>
+      <ul class="no-style-list">
+        <li>Timotius Nugroho Chandra</li>
+        <li>Principal Software Engineer | GDP Labs</li>
+        <li><a href="http://id.linkedin.com/in/timotiuschandra">http://id.linkedin.com/in/TimotiusChandra</a></li>
+        <li>timotius.n.chandra@gdplabs.id</li>
+      </ul>
+    </article>
+    <aside class="note">
+      <section>
+        <ul>
+          <li>Before starting on GDC, introduce yourself and a little about GDP Labs</li>
+          <li>Introduce yourself, we are software engineers at GDP Labs</li>
+        </ul>
+      </section>
+    </aside>
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>GDP Portfolio Companies</h2>
+    </hgroup>
+    <article class="hcenter">
+      <img class="gdp-portfolio reflect" src="images/gdp.jpg" alt="GDP Portfolio Company" title="GDP Portfolio Company">
+    </article>
+    <aside class="note">
+      <section>
+        <ul>
+          <li>GDP Venture is a holding company. We have some portfolio companies</li>
+          <li>GDP Labs is part of GDP Venture</li>
+          <li>We have two main purposes</li>
+          <ul>
+            <li>Helping GDP Venture's portfolio companies</li>
+            <li>Developing GDP Labs very own product</li>
+          </ul>
+        </ul>
+        <p>GDP Venture is a strategic Internet investor focused on the Indonesian market. We invest in early and growth stage companies in the consumer-to-consumer and mobile industries. Some of our portfolio companies: Kaskus.co.id - The Largest Indonesian Community; Blibli.com - Ecommerce; Merah Putih Inc - Indonesia’s first tech and digital incubator.</p>
+      </section>
+    </aside>
+  </slide>
+
+  <slide class="fill nobackground" style="background-image: url(images/onlee/onlee.png)">
+    <aside class="note">
+      <section>
+        <ul>
+          <li>Co-Founder Bright 50, LLC</li>
+          <li>Executive VP of Engineering</li>
+          <ul>
+            <li>LogLogic (acquired by Tibco)</li>
+            <li>Microsoft (Feb 93 - May 01 | 8 years 4 months)</li>
+          </ul>
+          <li>Senior Director - Symantec Corporation (Nov 04 - Aug 07 | 2 years 10 months)</li>
+          <li>Senior Engineer - Silicon Graphics Inc. (SGI) (Feb 90 - Feb 91 | 1 year 1 month)</li>
+          <li>FI: The World's Largest Entrepreneur Training & Startup Launch Program</li>
+          <li>Always looking for great SOFTWARE ENGINEERS who are interested in mobile apps, cloud computing, web development, continuous delivery in Indonesia! We will train you if you don't know any of those technologies yet as long as you are willing to learn.</li>
+        </ul>
+      </section>
+    </aside>
+  </slide>
+
+  <slide class="fill nobackground" style="background-image: url(images/onlee/icpc2014_1.jpg)">
+    <hgroup>
+      <h2 class="white">Talk @ ICPC Asia - Jakarta 2014</h2>
+    </hgroup>
+    <footer class="source white">"The 2014 ACM ICPC Regional Asia Jakarta" Facebook Page</footer>
+  </slide>
+
+  <slide class="fill nobackground" style="background-image: url(images/onlee/icpc2014_3.jpg)">
+    <hgroup>
+      <h2 class="white">Talk @ ICPC Asia - Jakarta 2014</h2>
+    </hgroup>
+    <footer class="source white">Fendy Kosnatha's Facebook Photos</footer>
+  </slide>
+
+  <slide class="fill nobackground" style="background-image: url(images/onlee/icpc2014_2.jpg)">
+    <hgroup>
+      <h2 class="white">Award @ ICPC Asia - Jakarta 2014</h2>
+    </hgroup>
+    <footer class="source white">"The 2014 ACM ICPC Regional Asia Jakarta" Facebook Page</footer>
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>Skills</h2>
+      <h3></h3>
+    </hgroup>
+    <article class="no-margin-top text-center">
+      <img class="reflect margin-1em" src="images/games/skills.png">
+    </article>
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>Training</h2>
+    </hgroup>
+    <article class="no-margin-top text-center">
+      <img class="reflect margin-1em" src="images/games/training.png">
+    </article>
+  </slide>
+
+  <slide class="fill nobackground" style="background-image: url(images/games/bbag.png)">
+    <hgroup>
+    </hgroup>
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>Product Accomplishments</h2>
+      <h3>50+ projects</h3>
+    </hgroup>
+    <article class="no-margin-top text-center">
+      <img class="reflect margin-1em" src="images/games/projects.png">
+    </article>
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>kOthello</h2>
+      <h3>XNA / Windows Phone</h3>
+    </hgroup>
+    <article class="no-margin-top text-center">
+      <img class="reflect margin-1em" src="images/games/ko1.png">
+      <h3>Lumia Apps Olympiad (December 2012)</h3>
+      <h4>Ecky Putrady | Fendy Kosnatha | Felix Kurniawan Tirto</h4>
+    </article>
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>Crazy Jogger</h2>
+      <h3>Unity</h3>
+    </hgroup>
+    <article class="no-margin-top text-center">
+      <img class="reflect margin-1em" src="images/games/cj1.png">
+      <img class="reflect margin-1em" src="images/games/cj2.png">
+      <h3>Mobile Games Developer War 5 (October 2013)</h3>
+      <h4>Ecky Putrady | Fendy Kosnatha | Felix Kurniawan Tirto</h4>
+    </article>
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>e-Directory & G-Card</h2>
+      <h3>Grand Indonesia Shopping Mall</h3>
+    </hgroup>
+    <article class="no-margin-top text-center">
+      <img class="reflect margin-1em" src="images/games/edir.png">
+    </article>
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>e-Directory</h2>
+      <h3>Grand Indonesia Shopping Mall</h3>
+    </hgroup>
+    <article class="no-margin-top text-center">
+      <img class="reflect margin-1em" src="images/games/ed.png">
+    </article>
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>G-Card</h2>
+      <h3>Grand Indonesia Shopping Mall</h3>
+    </hgroup>
+    <article class="no-margin-top text-center">
+      <img class="reflect margin-1em" src="images/games/gc.png">
+    </article>
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>Best Paper Award</h2>
+      <h3>Karol Danutama</h3>
+    </hgroup>
+    <article>
+      <p>"Scalable Autograder and LMS Integration"</p>
+    </article>
+
+    <article class="smaller">
+      <p>4th International Conference on<br>
+      Electrical Engineering and Informatics 2013<br>
+      (ICEEI 2013)</p>
+    </article>
+
+    <article class="image-top-right">
+      <img class="reflect" src="images/games/bp1.jpg">
+    </article>
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>International Conference</h2>
+      <h3>Timotius Nugroho Chandra</h3>
+    </hgroup>
+    <article>
+      <p>"Source Code Editing Evaluator<br>
+      for Learning Programming"</p>
+    </article>
+
+    <article class="smaller">
+      <p>4th International Conference on<br>
+      Electrical Engineering and Informatics 2013<br>
+      (ICEEI 2013)</p>
+    </article>
+
+    <article class="image-top-right">
+      <img class="reflect" src="images/games/bp2.jpg">
+    </article>
+  </slide>
+
+  <slide class="segue dark nobackground">
+    <aside class="gdbar"><img src="images/gdp_labs_tiny.png"></aside>
+    <hgroup class="auto-fadein">
+      <h2>We're hiring!</h2>
+      <h3>apply to: <b>onlee@gdplabs.id</b> / <b>onlee@gdpventure.com</b></h3>
+      <a href="http://www.linkedin.com/in/onlee">http://www.linkedin.com/in/onlee</a>
+    </hgroup>
+  </slide>
+
+  <slide class="fill nobackground" style="background-image: url(images/we_went_gdc.jpg)">
+    <hgroup>
+      <h2 class="white">We Went to GDC 2014</h2>
+    </hgroup>
+
+    <aside class="note">
+      <section>
+        <ul>
+          <li>Last year, Ecky also came to this event and gave a guest lecture to UI GameDev class in October</li>
+        </ul>
+      </section>
+    </aside>
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>GDC Overview</h2>
+    </hgroup>
+    <article class="flexbox vcenter" style="margin-top: 0">
+      <img class="reflect img-margin-btm" src="images/bg_header.png">
+      <ul>
+        <li>Largest conference for game developers in the world</li>
+        <li>Big companies & indie</li>
+        <li>Sessions, workshops, and expo covering all aspects of game industry</li>
+      </ul>
+    </article>
+    <aside class="note">
+      <section>
+        <ul>
+          <li>Some sessions run in parallel</li>
+          <li>Most sessions are recorded</li>
+        </ul>
+      </section>
+    </aside>
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>Outline</h2>
+    </hgroup>
+    <article>
+      <ul>
+        <li>Lessons learned from GDC</li>
+        <li>Math for Game Programmers: Random Numbers</li>
+        <li>Expo</li>
+        <li>Experimental Gameplay Workshop (Demo)</li>
+        <li>Conclusion</li>
+        <li>Q & A</li>
+      </ul>
+    </article>
+    <aside class="note">
+      <section>
+        <ul>
+          <li>Due to high number of sessions, so we just pick one randomly, that is: Random Numbers</li>
+          <li>Most sessions are recorded contact us if you want specific videos</li>
+          <li>We will give a brief highlight of the expo</li>
+          <li>We will give a short demo about an experimental gameplay</li>
+          <li>We will close it with conclusion and Q&A</li>
+        </ul>
+      </section>
+    </aside>
+  </slide>
+
+  <slide class="segue dark nobackground">
+    <aside class="gdbar"><img src="images/gdp_labs_tiny.png"></aside>
+    <hgroup class="auto-fadein">
+      <h2>Lessons Learned</h2>
+      <h3>for Designing a Game</h3>
+    </hgroup>
+    <aside class="note">
+      <section>
+        <li>Let's start with Lessons Learned from GDC</li>
+      </section>
+    </aside>
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>Paper Prototype</h2>
+      <h3>Lessons Learned</h3>
+    </hgroup>
+    <article>
+      <ul>
+        <li>Faster</li>
+        <li>Easily Modified</li>
+        <li>Cheap! Cost you almost nothing</li>
+      </ul>
+    </article>
+
+    <article class="image-right">
+      <img class="reflect" src="images/lesson/paper.png">
+    </article>
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>Fail Fast, Iterate Faster</h2>
+      <h3>Lessons Learned</h3>
+    </hgroup>
+    <article>
+      <ul>
+        <li>Once you got the idea, do it fast</li>
+        <li>No Pretty GUI required during this process</li>
+        <li>Make more concept, when it fail, leave it</li>
+        <li>Move to next prototype</li>
+      </ul>
+    </article>
+
+    <article class="image-right">
+      <img class="reflect" src="images/lesson/fail.png">
+    </article>
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>Continue, not Build New</h2>
+      <h3>Lessons Learned</h3>
+    </hgroup>
+    <article>
+      <ul>
+        <li>More than 50% success games are franchise</li>
+        <li>Maintain to engange more user</li>
+        <li>There's always room for improvement</li>
+      </ul>
+    </article>
+
+    <article class="image-right">
+      <img class="reflect" src="images/lesson/continue.png">
+    </article>
+
+    <aside class="note">
+      <section>
+        <ul>
+          <li>if not franchise, it's a sequel</li>
+        </ul>
+      </section>
+    </aside>
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>Test! Need More Test!</h2>
+      <h3>Lessons Learned</h3>
+    </hgroup>
+    <article>
+      <ul>
+        <li>Although painful, it's required</li>
+        <li>User experience is one of the hardest</li>
+      </ul>
+    </article>
+
+    <article class="image-right">
+      <img class="reflect" src="images/lesson/test.png">
+    </article>
+
+    <aside class="note">
+      <section>
+        <ul>
+          <li>UX is the hardest to get the right <b>feels</b></li>
+          <li>The question is: ‘What’s the hardest thing on development’. It’s testing, well, we always need more tester that can give us feedback</li>
+        </ul>
+      </section>
+    </aside>
+  </slide>
+
+  <slide class="segue dark nobackground">
+    <aside class="gdbar"><img src="images/gdp_labs_tiny.png"></aside>
+    <hgroup class="auto-fadein">
+      <h2>Random Numbers</h2>
+      <h3>Math for Game Programmers</h3>
+      <h4>We pick this randomly!</h4>
+    </hgroup>
+  </slide>
+
+  <slide>
+    <hgroup class="margin-1em">
+      <h2>Why Random?</h2>
+      <h3>Math for Game Programmers - Random Numbers</h3>
+    </hgroup>
+    <article>
+      <ul>
+        <li>Variety in circumstances</li>
+      </ul>
+    </article>
+    <article class="image-right">
+      <img class="reflect" src="images/random/solitaire.png">
+    </article>
+  </slide>
+
+  <slide>
+    <hgroup class="margin-1em">
+      <h2>Why Random?</h2>
+      <h3>Math for Game Programmers - Random Numbers</h3>
+    </hgroup>
+    <article>
+      <ul>
+        <li>Variety in circumstances</li>
+        <li>Variety in outcome</li>
+      </ul>
+    </article>
+    <article class="image-right">
+      <img class="reflect" src="images/random/combat.png">
+    </article>
+  </slide>
+
+  <slide>
+    <hgroup class="margin-1em">
+      <h2>Why Random?</h2>
+      <h3>Math for Game Programmers - Random Numbers</h3>
+    </hgroup>
+    <article>
+      <ul>
+        <li>Variety in circumstances</li>
+        <li>Variety in outcome</li>
+        <li>Replayability</li>
+      </ul>
+    </article>
+    <article class="image-right">
+      <img class="reflect" src="images/random/replayability.png">
+    </article>
+  </slide>
+
+  <slide>
+    <hgroup class="margin-1em">
+      <h2>Why Random?</h2>
+      <h3>Math for Game Programmers - Random Numbers</h3>
+    </hgroup>
+    <article>
+      <ul>
+        <li>Variety in circumstances</li>
+        <li>Variety in outcome</li>
+        <li>Replayability</li>
+        <li>Reproducibility</li>
+      </ul>
+    </article>
+    <article class="image-right">
+      <img class="reflect" src="images/random/minecraft.png">
+    </article>
+  </slide>
+
+  <slide>
+    <hgroup class="margin-1em">
+      <h2>Why Random?</h2>
+      <h3>Math for Game Programmers - Random Numbers</h3>
+    </hgroup>
+    <article>
+      <ul>
+        <li>Variety in circumstances</li>
+        <li>Variety in outcome</li>
+        <li>Replayability</li>
+        <li>Reproducibility</li>
+        <li>Organicity</li>
+      </ul>
+    </article>
+    <article class="image-right">
+      <img class="reflect" src="images/random/organicity.png">
+    </article>
+  </slide>
+
+  <slide>
+    <hgroup class="margin-1em">
+      <h2>Why Random?</h2>
+      <h3>Math for Game Programmers - Random Numbers</h3>
+    </hgroup>
+    <article>
+      <ul>
+        <li>Variety in circumstances</li>
+        <li>Variety in outcome</li>
+        <li>Replayability</li>
+        <li>Reproducibility</li>
+        <li>Organicity</li>
+        <li>Fairness</li>
+      </ul>
+    </article>
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>Random Number Generation</h2>
+      <h3>Math for Game Programmers - Random Numbers</h3>
+    </hgroup>
+    <article>
+      <ul class="build">
+        <li>Just "random"</li>
+          <code>return 0 to MAX_INTEGER</code>
+      </ul>
+    </article>
+
+    <article>
+      <ul class="build">
+        <li>Pseudo-Random</li>
+        <ul>
+          <li>provide variety</li>
+          <li>provide reproducibility</li>
+          <ul>
+            <li>using same seed</li>
+            <li>seed is <b>fragile</b>, be careful</li>
+          </ul>
+        </ul>
+      </ul>
+    </article>
+  </slide>
+
+ <slide>
+    <hgroup>
+      <h2>Randomness affect Player’s Psychology</h2>
+    </hgroup>
+    <article>
+      <ul>
+        <li><b>Create Disbelief</b></li>
+        <ul>
+          <li>70% means <b>yes, I think there’s a chance to get it</b></li>
+          <li>99% means <b>guaranteed</b></li>
+          <li>0.1% means <b>almost never</b></li>
+        </ul>
+        <ul class="build">
+          <p>
+            <b>but</b>, with LARGE scale players, they will hit this, <b>a lot</b><br><br>
+            They will feel lucky (or unlucky)
+          </p>
+        </ul>
+      </ul>
+    </article>
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>Randomness affect Player’s Psychology</h2>
+    </hgroup>
+    <article>
+      <ul>
+        <li>Create Disbelief</li>
+        <li><b>Create Luck</b></li>
+      </ul>
+    </article>
+  </slide>
+
+  <slide>
+    <hgroup class="margin-1em">
+      <h2>Randomness affect Player's Psychology</h2>
+    </hgroup>
+    <article>
+      <ul>
+        <li>Create Disbelief</li>
+        <li><b>Create Luck</b></li>
+      </ul>
+    </article>
+    <article class="image-right">
+      <img class="reflect" src="images/random/badluck1.png">
+    </article>
+  </slide>
+
+  <slide>
+    <hgroup class="margin-1em">
+      <h2>Randomness affect Player's Psychology</h2>
+    </hgroup>
+    <article>
+      <ul>
+        <li>Create Disbelief</li>
+        <li><b>Create Luck</b></li>
+      </ul>
+    </article>
+    <article class="image-right">
+      <img class="reflect" src="images/random/badluck2.png">
+    </article>
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>Randomness affect Player’s Psychology</h2>
+    </hgroup>
+    <article>
+      <ul>
+        <li>Create Disbelief</li>
+        <li>Create Luck</li>
+        <li>Loss Aversion</li>
+        <ul>
+          <li>Players <b>like</b> to <b>WIN BIG</b></li>
+          <li>Players <b>hate</b> to <b>LOSING BIG</b></li>
+        </ul>
+      </ul>
+    </article>
+    <article class="image-right">
+      <img class="reflect" src="images/random/badluck2.png">
+    </article>
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>Re-Roll for Desired Result</h2>
+    </hgroup>
+
+    <article>
+      <ul class="build">
+        <li>Single random affect all result?</li>
+        <li>Controlled Random?</li>
+      </ul>
+
+      <ul class="build">
+        <li>Answer: <b>it depends!</b></li>
+        <ul>
+          <li>How costly</li>
+          <li>How often will this hit fail?</li>
+        </ul>
+      </ul>
+    </article>
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>Re-Roll for Desired Result</h2>
+    </hgroup>
+
+    <article>
+      <ul>
+        <li>Single random affect all result?</li>
+        <li>Controlled Random?</li>
+      </ul>
+
+      <ul>
+        <li>Answer: <b>it depends!</b></li>
+        <ul>
+          <li>How costly</li>
+          <li>How often will this hit fail?</li>
+        </ul>
+      </ul>
+    </article>
+
+    <article class="image-right">
+      <img class="reflect" src="images/random/scatter.png">
+    </article>
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>Reloading State & Random</h2>
+    </hgroup>
+
+    <article>
+      <ul class="build">
+        <li>
+          Re-roll in encounter
+          <article class="smaller">
+            <ul>Allow state manipulation</ul>
+          </article>
+        </li>
+        <li>
+          Pre-roll (on initialize)
+          <article class="smaller">
+            <ul>Allow future prediction</ul>
+          </article>
+        </li>
+      </ul>
+    </article>
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>Types of Randomness</h2>
+    </hgroup>
+
+    <article>
+      <ul class="build">
+        <li>
+          Independent randomness
+          <article class="smaller">
+            <ul>
+              Previous roll does not affect the next one<br>
+              Example: dice
+            </ul>
+          </article>
+        </li>
+        <li>
+          Dependent randomness
+          <article class="smaller">
+            <ul>
+              Each random has the chance to alter the probabilities<br>
+              Example: card deck
+            </ul>
+          </article>
+        </li>
+      </ul>
+    </article>
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>Probability Density</h2>
+    </hgroup>
+    <article class="flexbox vcenter">
+      <img class="reflect" src="images/random/density1.png">
+    </article>
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>Probability Density</h2>
+    </hgroup>
+    <article class="flexbox vcenter">
+      <img class="reflect" src="images/random/density2.png">
+    </article>
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>Probability Density</h2>
+    </hgroup>
+    <article class="flexbox vcenter">
+      <img class="reflect" src="images/random/density3.png">
+    </article>
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>Probability Density</h2>
+    </hgroup>
+    <article class="flexbox vcenter">
+      <img class="reflect" src="images/random/density4.png">
+    </article>
+  </slide>
+
+  <slide class="segue dark nobackground">
+    <aside class="gdbar"><img src="images/gdp_labs_tiny.png"></aside>
+    <hgroup class="auto-fadein">
+      <h2>Expo</h2>
+    </hgroup>
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>Virtual Reality</h2>
+    </hgroup>
+    <article class="flexbox vcenter">
+      <img class="reflect" src="images/expo/virt1.jpg">
+    </article>
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>Virtual Reality</h2>
+    </hgroup>
+    <article class="vcenter" style="padding-left: 5em">
+      <span class="left margin-2em">
+        <div class="img-caption">Virtuix Omni</div>
+        <img class="reflect" src="images/expo/virt2.jpg">
+      </span>
+      <span class="left">
+        <div class="img-caption">PrioVR</div>
+        <img class="reflect" src="images/expo/virt3.jpg">
+      </span>
+    </article>
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>Ubisoft Lounge</h2>
+    </hgroup>
+    <article class="flexbox vcenter">
+      <img class="reflect" src="images/expo/snow_drop_engine.jpg">
+    </article>
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>Ubisoft Lounge</h2>
+      <h3>UbiArt Framework</h3>
+    </hgroup>
+    <article class="no-margin-top flexbox vcenter">
+      <img class="ubi-art-logo" src="images/expo/ubi_art.png">
+      <img class="ubi-art-1 reflect" src="images/expo/ubi_art1.jpg">
+    </article>
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>Ubisoft Lounge</h2>
+      <h3>UbiArt Framework</h3>
+    </hgroup>
+    <article>
+      <ul>
+        <li>2D Game Engine - that is not 2D</li>
+        <li>...a layered 3D actually</li>
+      </ul>
+    </article>
+    <article class="image-right">
+      <img class="reflect" src="images/expo/ubi_art2.jpg">
+    </article>
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>Ubisoft Lounge</h2>
+      <h3>snow drop engine</h3>
+    </hgroup>
+    <article>
+      <p>Full 3D Game Engine</p>
+    </article>
+    <article class="image-right">
+      <img class="reflect" src="images/expo/snow_drop1.jpg">
+    </article>
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>Ubisoft Lounge</h2>
+      <h3>snow drop engine</h3>
+    </hgroup>
+    <article>
+      <p>Foliage Generator</p>
+    </article>
+    <article class="image-right">
+      <img class="reflect" src="images/expo/snow_drop2.jpg">
+    </article>
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>Ubisoft Lounge</h2>
+      <h3>snow drop engine</h3>
+    </hgroup>
+    <article>
+      <p>Procedural Building</p>
+    </article>
+    <article class="image-right">
+      <img class="reflect" src="images/expo/snow_drop3.jpg">
+    </article>
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>Ubisoft Lounge</h2>
+      <h3>snow drop engine</h3>
+    </hgroup>
+    <article>
+      <p>Real time capture<br>with in-game previsualization</p>
+    </article>
+    <article class="image-right">
+      <img class="reflect" src="images/expo/snow_drop4.jpg">
+    </article>
+  </slide>
+
+  <slide class="segue dark nobackground">
+    <aside class="gdbar"><img src="images/gdp_labs_tiny.png"></aside>
+    <hgroup class="auto-fadein">
+      <h2>Experimental Gameplay Workshop</h2>
+    </hgroup>
+  </slide>
+
+  <slide class="segue dark quote nobackground">
+    <aside class="gdbar right bottom"><img src="images/gdp_labs_tiny.png"></aside>
+    <article class="flexbox vleft auto-fadein">
+      <q>
+        Successful games are usually a twist of previously successful games.
+      </q>
+      <div class="author">
+        Ecky Putrady<br>
+        GDP Labs
+      </div>
+    </article>
+    <aside class="note">
+      <section>
+        <ul>
+          <li>to begin this, I'd like to quote a friend of mine</li>
+        </ul>
+      </section>
+    </aside>
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>Game Mechanics</h2>
+      <h3>Experimental Gameplay Workshop</h3>
+    </hgroup>
+    <article>
+      <ul>
+        <li>Bejeweled - Candy Crush Saga</li>
+        <ul>
+          <li><b>Match-3</b></li>
+        </ul>
+        <li>Temple Run - Minion Rush</li>
+        <ul>
+          <li><b>Platformer / Endless Running</b></li>
+        </ul>
+        <li>Travian, Backyard Monsters - Clash of Clans</li>
+        <ul>
+          <li><b>Strategy</b></li>
+        </ul>
+        <li>DotA (Warcraft III) - DotA 2</li>
+        <ul>
+          <li><b>Multiplayer Online Battle Arena (MOBA)</b></li>
+        </ul>
+      </ul>
+    </article>
+    <article class="image-right">
+      <img class="reflect" src="images/mechanic/bjw_ccs.png">
+    </article>
+    <aside class="note">
+      <section>
+        <ul>
+          <li>Bejeweled (2001) - 150 million downloads; Candy Crush Saga (2012) - everybody's playing it</li>
+          <li>Temple Run (2011, iOS) - billion downloads; Minion Rush (2013)</li>
+          <li>Travian (2004), Backyard Monsters (2009, FB Game 20 mill install); Clash of Clans (2012)</li>
+          <li><a href="http://www.theverge.com/2014/6/4/5776232/temple-run-1-billion-downloads">TempleRun 1 billion downloads</a></li>
+          <li><a href="http://www.pocketgamer.biz/news/45628/clash-of-clans-and-hay-day-pulling-in-500000-a-day-for-supercell/">CoC $500K/day</a></li>
+        </ul>
+      </section>
+    </aside>
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>Game Mechanics</h2>
+      <h3>Experimental Gameplay Workshop</h3>
+    </hgroup>
+    <article>
+      <ul>
+        <li>Bejeweled - Candy Crush Saga</li>
+        <ul>
+          <li><b>Match-3</b></li>
+        </ul>
+        <li>Temple Run - Minion Rush</li>
+        <ul>
+          <li><b>Platformer / Endless Running</b></li>
+        </ul>
+        <li>Travian, Backyard Monsters - Clash of Clans</li>
+        <ul>
+          <li><b>Strategy</b></li>
+        </ul>
+        <li>DotA (Warcraft III) - DotA 2</li>
+        <ul>
+          <li><b>Multiplayer Online Battle Arena (MOBA)</b></li>
+        </ul>
+      </ul>
+    </article>
+    <article class="image-right">
+      <img class="reflect" src="images/mechanic/trun_mrush.png">
+    </article>
+    <aside class="note">
+      <section>
+        <ul>
+          <li>Bejeweled (2001) - 150 million downloads; Candy Crush Saga (2012) - everybody's playing it</li>
+          <li>Temple Run (2011, iOS) - billion downloads; Minion Rush (2013)</li>
+          <li>Travian (2004), Backyard Monsters (2009, FB Game 20 mill install); Clash of Clans (2012)</li>
+          <li><a href="http://www.theverge.com/2014/6/4/5776232/temple-run-1-billion-downloads">TempleRun 1 billion downloads</a></li>
+          <li><a href="http://www.pocketgamer.biz/news/45628/clash-of-clans-and-hay-day-pulling-in-500000-a-day-for-supercell/">CoC $500K/day</a></li>
+        </ul>
+      </section>
+    </aside>
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>Game Mechanics</h2>
+      <h3>Experimental Gameplay Workshop</h3>
+    </hgroup>
+    <article>
+      <ul>
+        <li>Bejeweled - Candy Crush Saga</li>
+        <ul>
+          <li><b>Match-3</b></li>
+        </ul>
+        <li>Temple Run - Minion Rush</li>
+        <ul>
+          <li><b>Platformer / Endless Running</b></li>
+        </ul>
+        <li>Travian, Backyard Monsters - Clash of Clans</li>
+        <ul>
+          <li><b>Strategy</b></li>
+        </ul>
+        <li>DotA (Warcraft III) - DotA 2</li>
+        <ul>
+          <li><b>Multiplayer Online Battle Arena (MOBA)</b></li>
+        </ul>
+      </ul>
+    </article>
+    <article class="image-right">
+      <img class="reflect" src="images/mechanic/bm_coc.png">
+    </article>
+    <aside class="note">
+      <section>
+        <ul>
+          <li>Bejeweled (2001) - 150 million downloads; Candy Crush Saga (2012) - everybody's playing it</li>
+          <li>Temple Run (2011, iOS) - billion downloads; Minion Rush (2013)</li>
+          <li>Travian (2004), Backyard Monsters (2009, FB Game 20 mill install); Clash of Clans (2012)</li>
+          <li><a href="http://www.theverge.com/2014/6/4/5776232/temple-run-1-billion-downloads">TempleRun 1 billion downloads</a></li>
+          <li><a href="http://www.pocketgamer.biz/news/45628/clash-of-clans-and-hay-day-pulling-in-500000-a-day-for-supercell/">CoC $500K/day</a></li>
+        </ul>
+      </section>
+    </aside>
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>Game Mechanics</h2>
+      <h3>Experimental Gameplay Workshop</h3>
+    </hgroup>
+    <article>
+      <ul>
+        <li>Bejeweled - Candy Crush Saga</li>
+        <ul>
+          <li><b>Match-3</b></li>
+        </ul>
+        <li>Temple Run - Minion Rush</li>
+        <ul>
+          <li><b>Platformer / Endless Running</b></li>
+        </ul>
+        <li>Travian, Backyard Monsters - Clash of Clans</li>
+        <ul>
+          <li><b>Strategy</b></li>
+        </ul>
+        <li>DotA (Warcraft III) - DotA 2</li>
+        <ul>
+          <li><b>Multiplayer Online Battle Arena (MOBA)</b></li>
+        </ul>
+      </ul>
+    </article>
+    <article class="image-right">
+      <img class="reflect" src="images/mechanic/dota2.jpg">
+    </article>
+    <aside class="note">
+      <section>
+        <ul>
+          <li>Bejeweled (2001) - 150 million downloads; Candy Crush Saga (2012) - everybody's playing it</li>
+          <li>Temple Run (2011, iOS) - billion downloads; Minion Rush (2013)</li>
+          <li>Travian (2004), Backyard Monsters (2009, FB Game 20 mill install); Clash of Clans (2012)</li>
+          <li><a href="http://www.theverge.com/2014/6/4/5776232/temple-run-1-billion-downloads">TempleRun 1 billion downloads</a></li>
+          <li><a href="http://www.pocketgamer.biz/news/45628/clash-of-clans-and-hay-day-pulling-in-500000-a-day-for-supercell/">CoC $500K/day</a></li>
+        </ul>
+      </section>
+    </aside>
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>Experimental Gameplay Workshop</h2>
+      <h3>Let's play!</h3>
+    </hgroup>
+    <article class="no-margin-top flexbox vcenter">
+      <img class="reflect" src="images/experimental/gorogoa.jpg">
+      <footer class="source">source: http://gorogoa.com/</footer>
+    </article>
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>Experimental Gameplay Workshop</h2>
+      <h3>Let's play!</h3>
+    </hgroup>
+    <article class="no-margin-top flexbox vcenter">
+      <img class="reflect" src="images/experimental/fru.jpg">
+      <footer class="source">source: http://www.geek.com/</footer>
+    </article>
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>Conclusion</h2>
+    </hgroup>
+    <article class="">
+      <ul>
+        <li><b>GDC 2014 - Lessons Learned</b></li>
+        <li><b>Random Numbers</b> [GDC Session]</li>
+        <li><b>Virtual Reality</b> [Expo]</li>
+          <ul>
+            <li>How game technology is moving toward a more immersive experience</li>
+          </ul>
+        <li><b>Ubisoft Framework & Game Engine</b> [Expo]</li>
+        <li><b>Experimental Gameplay</b></li>
+          <ul>
+            <li>Breakthrough game mechanics is hard to monetize but it's AWESOME!</li>
+          </ul>
+      </ul>
+    </article>
+
+    <aside class="note">
+      <section>
+        <li>We have talked about GDC 2014 overview and its lessons learned</li>
+        <li>We have talked about one of GDC 2014 session: Random Numbers</li>
+        <li>We have shared the highlights of the Expo: Virtual Reality and Ubisoft Framework</li>
+        <li>We also talked about experimental gameplay</li>
+      </section>
+    </aside>
+  </slide>
+
+  <slide class="thank-you-slide segue nobackground">
+    <aside class="gdbar right"><img src="images/gdp_labs_tiny.png"></aside>
+    <article class="flexbox vleft auto-fadein">
+      <h2>&lt;Thank You!&gt;</h2>
+      <p>Questions or comments ?</p>
+    </article>
+    <p class="auto-fadein" data-config-contact>
+      <!-- populated from slide_config.json -->
+    </p>
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>Bhinneka Tunggal Ika</h2>
+      <h3>J2ME / Nokia (MDGW 1 & 2)</h3>
+    </hgroup>
+    <article class="no-margin-top text-center">
+      <img class="reflect margin-1em" src="images/games/bti1.jpg">
+      <img class="reflect margin-1em" src="images/games/bti3.jpg">
+      <img class="reflect margin-1em" src="images/games/bti3.jpg">
+      <img class="reflect margin-1em" src="images/games/bti4.jpg">
+    </article>
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>Ace Core</h2>
+      <h3>J2ME / Nokia (MGDW 3)</h3>
+    </hgroup>
+    <article class="no-margin-top text-center">
+      <img class="reflect margin-1em" src="images/games/ac1.png">
+      <img class="reflect margin-1em" src="images/games/ac3.png">
+      <img class="reflect margin-1em" src="images/games/ac4.png">
+    </article>
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>Defenders Apocalypse</h2>
+      <h3>Android (for Compfest 2010 Game Dev Competition)</h3>
+    </hgroup>
+    <article class="text-center">
+      <img class="reflect margin-1em" src="images/games/da1.png">
+      <img class="reflect margin-1em" src="images/games/da2.png">
+    </article>
+  </slide>
+
+  <slide class="backdrop"></slide>
+
+</slides>
+
+<script>
+var _gaq = _gaq || [];
+_gaq.push(['_setAccount', 'UA-XXXXXXXX-1']);
+_gaq.push(['_trackPageview']);
+
+(function() {
+  var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+  ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+  var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+})();
+</script>
+
+<!--[if IE]>
+  <script src="http://ajax.googleapis.com/ajax/libs/chrome-frame/1/CFInstall.min.js"></script>
+  <script>CFInstall.check({mode: 'overlay'});</script>
+<![endif]-->
+</body>
+</html>

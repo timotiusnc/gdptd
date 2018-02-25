@@ -1,0 +1,257 @@
+/* ===== SLIDE CONTENT ===== */
+ul.no-style-list {
+  li:before {
+    content: ""
+  }
+}
+
+article.hcenter {
+  text-align: center;
+}
+
+.logoslide {
+  img {
+    width: 383px;
+    height: 92px;
+  }
+}
+
+.segue {
+  padding: $slide-left-right-padding $slide-left-right-padding * 2;
+
+  h2 {
+    color: $gray-1;
+    font-size: 60px;
+  }
+  h3 {
+    color: $gray-1;
+    line-height: 2.8;
+  }
+  hgroup {
+    position: absolute;
+    bottom: 225px;
+  }
+}
+
+.thank-you-slide {
+  background: $brand-blue !important;
+  color: white;
+
+  h2 {
+    font-size: 60px;
+    color: inherit;
+  }
+
+  article > p {
+    margin-top: 2em;
+    font-size: 20pt;
+  }
+
+  > p {
+    position: absolute;
+    bottom: $slide-top-bottom-padding * 2;
+    font-size: 24pt;
+    line-height: 1.3;
+  }
+}
+
+aside.gdbar {
+  height: 97px;
+  width: 215px;
+  position: absolute;
+  left: -1px;
+  top: 125px;
+  @include border-radius(0 10px 10px 0);
+  @include background(linear-gradient(left, $gray-1, $gray-1) no-repeat);
+  @include background-size(0% 100%);
+  @include transition(all 0.5s ease-out 0.5s); /* Better to transition only on background-size, but not sure how to do that with the mixin. */
+
+  &.right {
+    right: 0;
+    left: -moz-initial;
+    left: initial;
+    top: ($slide-height / 2) - 96; /* 96 is height of gray icon bar */
+    @include transform(rotateZ(180deg));
+
+    img {
+      @include transform(rotateZ(180deg));
+    }
+  }
+
+  &.bottom {
+    top: -moz-initial;
+    top: initial;
+    bottom: $slide-left-right-padding;
+  }
+
+  img {
+    width: 85px;
+    height: 85px;
+    position: absolute;
+    right: 0;
+    margin: 8px 15px;
+  }
+}
+
+.title-slide {
+
+  hgroup {
+    bottom: 100px;
+
+    h1 {
+      font-size: 65px;
+      line-height: 1.4;
+      letter-spacing: -3px;
+      color: $gray-4;
+    }
+
+    h2 {
+      font-size: 34px;
+      color: $gray-2;
+      font-weight: inherit;
+    }
+
+    p {
+      font-size: 20px;
+      color: $gray-3;
+      line-height: 1.3;
+      margin-top: 2em;
+    }
+  }
+}
+
+.quote {
+  color: $gray-1;
+
+  .author {
+    font-size: 24px;
+    position: absolute;
+    bottom: 80px;
+    line-height: 1.4;
+  }
+}
+
+[data-config-contact] {
+  a {
+    color: rgb(255, 255, 255);
+    border-bottom: none;
+  }
+  span {
+    width: 115px;
+    display: inline-block;
+  }
+}
+
+.overview {
+
+  &.popup {
+    .note {
+      display: none !important;
+    }
+  }
+  
+  slides {
+    slide {
+      &.backdrop {
+        display: none !important;
+      }
+
+      display: block;
+      cursor: pointer;
+      opacity: 0.5;
+      pointer-events: auto !important;
+
+      @include backdrop();
+
+      &.far-past,
+      &.past,
+      &.next,
+      &.far-next,
+      &.far-past {
+        opacity: 0.5;
+        display: block;
+      }
+
+      &.current {
+        opacity: 1;
+      }
+    }
+  }
+
+  .slide-area {
+    display: none;
+  }
+}
+
+@media print {
+  slides {
+    slide {
+      display: block !important;
+      position: relative;
+      @include backdrop();
+      @include transform(none !important);
+      width: 100%;
+      height: 100%;
+      page-break-after:always;
+      top: auto !important;
+      left: auto !important;
+      margin-top: 0 !important;
+      margin-left: 0 !important;
+      opacity: 1 !important;
+      color: #555;
+
+      &.far-past,
+      &.past,
+      &.next,
+      &.far-next,
+      &.far-past,
+      &.current {
+        opacity: 1 !important;
+        display: block !important;
+      }
+
+      .build {
+        > * {
+          @include transition(none);
+        }
+
+        .to-build,
+        .build-fade {
+          opacity: 1;
+        }
+      }
+
+      .auto-fadein {
+        opacity: 1 !important;
+      }
+
+      &.backdrop {
+        display: none !important;
+      }
+
+      table.rows {
+        border-right: 0;
+      }
+    }
+
+    slide[hidden] {
+      display: none !important;
+    }
+  }
+
+  .slide-area {
+    display: none;
+  }
+
+  .reflect {
+    -webkit-box-reflect: none;
+    -moz-box-reflect: none;
+    -o-box-reflect: none;
+    -ms-box-reflect: none;
+    box-reflect: none;
+  }
+
+  pre, code {
+    font-family: monospace !important;
+  }
+}
