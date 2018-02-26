@@ -105,7 +105,7 @@ URL: https://code.google.com/p/io-2012-slides
     </hgroup>
     <article class="">
       <ul>
-        <li>A natural extension for a community</li>
+        <li>A natural extension for KASKUS communities</li>
         <li>Chat groups of KASKUS communities <b><u>outside</u></b> of KASKUS</li>
       </ul>
     </article>
@@ -202,11 +202,24 @@ URL: https://code.google.com/p/io-2012-slides
     <article>
         <ul>
             <li>Nature of Real Time Communication</li>
-            <li>Notification!!</li>
             <li>Encryption</li>
+            <li>Push Notification</li>
             <li>Third party dependencies</li>
         </ul>
     </article>
+    <aside class="note">
+      <section>
+        <ul>
+          <li>Persistent connection. But battery impact</li>
+          <li>When receiving messages notification, people expect the message is there when notification is clicked</li>
+          <li>Android - Not all phones allow process to be awaken up</li>
+          <li>iOS - By default process is not awaken up when push is received, but there is a workaround for iOS 10 to save to database, but not working anymore for iOS 11</li>
+          <li>Ultimate solution: make it VoIP → implement VoIP</li>
+          <li>Seamless connection</li>
+          <li>Multi-device Message synchronization</li>
+        </ul>
+      </section>
+    </aside>
   </slide>
 
   <slide class="segue dark quote nobackground">
@@ -228,9 +241,18 @@ URL: https://code.google.com/p/io-2012-slides
     </aside>
   </slide>
 
+  <slide class="segue dark nobackground">
+    <aside class="gdbar"><img src="images/gdpla.png"></aside>
+    <hgroup class="auto-fadein">
+      <h2>Nature of RTC</h2>
+      <h3>What are the expected things?</h3>
+    </hgroup>
+  </slide>
+
   <slide>
     <hgroup>
-      <h2>Real Time</h2>
+      <h2>Nature of Real Time Communication</h2>
+      <h3>What are the expected things?</h3>
     </hgroup>
     <article>
         <ul>
@@ -238,6 +260,126 @@ URL: https://code.google.com/p/io-2012-slides
           <li>Short span of users attention</li>
           <li>Asynchronous</li>
         </ul>
+    </article>
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>Nature of Real Time Communication</h2>
+      <h3>How do we achieve that?</h3>
+    </hgroup>
+    <article>
+        <ul>
+          <li>
+            <b>Persistent connection!!</b>
+            <ul>
+              <li>but...battery drain</li>
+              <li>but...some OEMs do NOT allow background process</li>
+              <li><b>Push Notification</b> to the rescue!!</li>
+            </ul>
+          </li>
+          <li>
+            <b>XMPP!!</b>
+            <ul>
+              <li>Different concept from usual HTTP</li>
+              <li>Need to unlearn and relearn</li>
+            </ul>
+          </li>
+        </ul>
+    </article>
+    <article class="smaller">
+      <p style="font-style: italic">Mungkin bisa dijelaskan (lisan) bagaimana kita jadi harus kill connection ketika app ditutup dan kemudian improve mati2an login time di sisi server biar proses login cepat</p>
+    </article>
+  </slide>
+
+  <slide class="segue dark nobackground">
+    <aside class="gdbar"><img src="images/gdpla.png"></aside>
+    <hgroup class="auto-fadein">
+      <h2>Encryption</h2>
+      <h3>How do we protect user's privacy?</h3>
+    </hgroup>
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>Encryption</h2>
+    </hgroup>
+    <article class="no-margin-top text-center">
+      <img class="reflect" src="images/encryption.png">
+    </article>
+  </slide>
+
+  <slide class="segue dark nobackground">
+    <aside class="gdbar"><img src="images/gdpla.png"></aside>
+    <hgroup class="auto-fadein">
+      <h2>Push Notification</h2>
+      <h3>Why is it so important?</h3>
+    </hgroup>
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>Push Notification</h2>
+      <h3>Content Still Encrypted</h3>
+    </hgroup>
+    <article class="no-margin-top text-center">
+      <video src="videos/IMG_5135.mp4" controls="controls" autoplay loop>Can't play video</video>
+    </article>
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>Push Notification</h2>
+      <h3>Content Has Been Decrypted</h3>
+    </hgroup>
+    <article class="no-margin-top text-center">
+      <video src="videos/IMG_5133.mp4" controls="controls" autoplay loop>Can't play video</video>
+    </article>
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>Push Notification</h2>
+      <h3>Users' expectation</h3>
+    </hgroup>
+    <article class="no-margin-top">
+        <ul>
+          <li>Users want decrypted content</li>
+          <li>Users want the content to show up instantly when the notification is clicked</li>
+        </ul>
+    </article>
+    <article class="smaller">
+      <p style="font-style: italic">Ingatkan user tentang challenge di awal (bagian "Nature of RTC"): some phones do NOT allow background process,
+        sehingga kita harus mengimplementasikan silent push di iOS.
+        Namun demikian, silent push tidak bekerja di iOS 11
+        kecuali aplikasinya bertipe VoIP (ada di slide selanjutnya).</p>
+    </article>
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>Push Notification on iOS</h2>
+    </hgroup>
+    <article class="no-margin-top text-center">
+      <img class="reflect" src="images/silentpush.png">
+    </article>
+    <article style="margin-top: 36px">
+      <p>Only VoIP apps are allowed to execute silent push.<br>
+      <br>
+      We need to implement a VoIP feature (voice call) just to enable push notification.</p>
+    </article>
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>Push Notification on Android</h2>
+    </hgroup>
+    <article class="no-margin-top text-center">
+      <img class="reflect" style="width: 500px" src="images/autostart2.png">
+    </article>
+    <article style="margin-top: 24px" class="smaller">
+      <p>Some Android phones prevent some apps to execute background process.<br>
+      There's nothing much we can do here.</p>
     </article>
   </slide>
 
