@@ -346,6 +346,7 @@ URL: https://code.google.com/p/io-2012-slides
         <ul>
           <li>Users want decrypted content</li>
           <li>Users want the content to show up instantly when the notification is clicked</li>
+          <li>Users want push notification to be dismissed if it's already read on other devices</li>
         </ul>
     </article>
     <article class="smaller">
@@ -379,8 +380,176 @@ URL: https://code.google.com/p/io-2012-slides
     </article>
     <article style="margin-top: 24px" class="smaller">
       <p>Some Android phones prevent some apps to execute background process.<br>
-      There's nothing much we can do here.</p>
+      We need to educate user about this so they can enable auto-start for our chat app.</p>
     </article>
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>Push Notification Synchronization</h2>
+      <h3>Auto Dismiss Push Notification</h3>
+    </hgroup>
+    <article class="no-margin-top text-center">
+      <video src="videos/IMG_5134.mp4" controls="controls" autoplay loop>Can't play video</video>
+    </article>
+  </slide>
+
+  <slide class="segue dark nobackground">
+    <aside class="gdbar"><img src="images/gdpla.png"></aside>
+    <hgroup class="auto-fadein">
+      <h2>Third Party Dependencies</h2>
+      <h3>Livin' at the mercy of others</h3>
+    </hgroup>
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>Third Party Dependencies</h2>
+      <h3>Push Notification Provider</h3>
+    </hgroup>
+    <article>
+      <table>
+        <tr>
+          <th></th><th>Parse</th><th>FCM</th>
+        </tr>
+        <tr>
+          <td>Device Management</td><td>✔</td><td>❌</td>
+        </tr>
+        <tr>
+          <td>User Management</td><td>✔</td><td>❌</td>
+        </tr>
+        <tr>
+          <td>Topic-Based Push</td><td>✔</td><td>✔</td>
+        </tr>
+        <tr>
+          <td>Remote Configuration</td><td>✔</td><td>✔</td>
+        </tr>
+        <tr>
+          <td>BaaS for Data Layers</td><td>✔</td><td>❌</td>
+        </tr>
+      </table>
+    </article>
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>Third Party Dependencies</h2>
+      <h3>Cellular Provider</h3>
+    </hgroup>
+    <article>
+      <ul>
+        <li>Many users report long connecting issue</li>
+        <li>Happened intermittently</li>
+        <li style="color: red"><b>Cause: failure resolving hostname IP address</b></li>
+        <li>Tried moving NS from Route53 to KASKUS DNS: did not work</li>
+        <li>Tried using .com domain: did not work</li>
+      </ul>
+    </article>
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>Third Party Dependencies</h2>
+      <h3>Cellular Provider</h3>
+    </hgroup>
+    <article>
+      <ul>
+        <li>
+          Use direct IP address using HAProxy
+          <ul>
+            <li>AWS ELB does not support direct IP address</li>
+          </ul>
+        </li>
+        <li>
+          What we did
+          <ul>
+            <li><b>Setup 2 HAProxy for high availability</b></li>
+            <li><b>Modify client to implement endpoint picking algorithm</b></li>
+          </ul>
+        </li>
+      </ul>
+    </article>
+  </slide>
+
+  <slide class="segue dark nobackground">
+    <aside class="gdbar"><img src="images/gdpla.png"></aside>
+    <hgroup class="auto-fadein">
+      <h2>Conclusion</h2>
+      <h3>Recapping...</h3>
+    </hgroup>
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>Challenges and Solutions</h2>
+    </hgroup>
+    <article>
+      <table>
+        <tr>
+          <th></th><th>Challenge(s)</th><th>Solution(s)</th>
+        </tr>
+        <tr>
+          <td>Nature of RTC</td>
+          <td>
+            <ul>
+              <li>Persistent Connection</li>
+              <li>XMPP</li>
+            </ul>
+          </td>
+          <td>
+            <ul>
+              <li>Push Notification</li>
+              <li>Unlearn and relearn</li>
+            </ul>
+          </td>
+        </tr>
+        <tr>
+          <td>Encryption</td><td>Many choices</td><td>E2E encryption with service provider</td>
+        </tr>
+        <tr>
+          <td>Push Notification</td>
+          <td>
+            <ul>
+              <li>Limited background process</li>
+              <li>Different behavior due to fragmented Android versions</li>
+            </ul>
+          </td>
+          <td>
+            <ul>
+              <li>Silent push</li>
+              <li>VoIP feature</li>
+              <li>Educate user regarding auto-start</li>
+            </ul>
+          </td>
+        </tr>
+        <tr>
+          <td>Third Party Dependencies</td>
+          <td>
+            <ul>
+              <li>Parse vs FCM</li>
+              <li>Cellular provider</li>
+            </ul>
+          </td>
+          <td>
+            <ul>
+              <li>Write extensible code</li>
+              <li>Persevere and be resourceful!</li>
+            </ul>
+          </td>
+        </tr>
+      </table>
+    </article>
+  </slide>
+
+  <slide class="thank-you-slide segue nobackground">
+    <aside class="gdbar right"><img src="images/gdpla.png"></aside>
+    <article class="flexbox vleft auto-fadein">
+      <h2>&lt;Thank You!&gt;</h2>
+      <p>Questions / Comments</p>
+    </article>
+    <p class="auto-fadein" data-config-contact>
+      <!-- populated from slide_config.json -->
+    </p>
   </slide>
 
   <slide>
@@ -426,325 +595,6 @@ URL: https://code.google.com/p/io-2012-slides
 &lt;/stream:stream&gt;
 </pre>
     </article>
-  </slide>
-
-  <slide>
-    <hgroup>
-      <h2>Encryption</h2>
-      <h3></h3>
-    </hgroup>
-    <article class="text-center">
-      <img class="reflect" src="images/encryption.png">
-    </article>
-  </slide>
-
-  <slide>
-    <hgroup>
-      <h2>Notification</h2>
-    </hgroup>
-    <article>
-        <ul>
-          <li>Persistent connection is forbidden in major mobile platforms</li>
-          <li>Workaround persistent connection limitation → using media provided by mobile platform</li>
-          <li>Engaging users</li>
-          <li>Encryption challenges</li>
-            <ul>
-              <li>Server does not know the content</li>
-              <li>...while users expect message preview in notification tray</li>
-            </ul>
-        </ul>
-    </article>
-  </slide>
-
-  <slide>
-    <hgroup>
-      <h2>Content Still Encrypted</h2>
-    </hgroup>
-    <article class="hcenter">
-      <video src="videos/IMG_5135.mp4" controls="controls" autoplay loop>Can't play video</video>
-    </article>
-  </slide>
-
-  <slide>
-    <hgroup>
-      <h2>Content Decrypted</h2>
-    </hgroup>
-    <article class="hcenter">
-      <video src="videos/IMG_5133.mp4" controls="controls" autoplay loop>Can't play video</video>
-    </article>
-  </slide>
-
-  <slide>
-    <hgroup>
-      <h2>Notification Expectation</h2>
-    </hgroup>
-    <article>
-        <ul>
-          <li>Decrypt</li>
-          <li>Save to database</li>
-        </ul>
-    </article>
-  </slide>
-
-  <slide>
-    <hgroup>
-      <h2>Silent Push</h2>
-      <h3>on iOS</h3>
-    </hgroup>
-    <article class="no-margin-top text-center">
-      <img class="reflect" src="images/silentpush.png">
-    </article>
-  </slide>
-
-  <slide>
-    <hgroup>
-      <h2>Notification Expectation</h2>
-    </hgroup>
-    <article>
-      <ul>
-        <li>Only VoIP apps allowed</li>
-        <li>Create VoIP feature</li>
-      </ul>
-    </article>
-  </slide>
-
-  <slide>
-    <hgroup>
-      <h2>Auto Start</h2>
-      <h3>on (some) Android phones</h3>
-    </hgroup>
-    <article class="no-margin-top text-center">
-      <img class="reflect" style="width: 500px" src="images/autostart2.png">
-    </article>
-  </slide>
-
-  <slide>
-    <hgroup>
-      <h2>Auto-Dismiss Notification</h2>
-    </hgroup>
-    <article class="hcenter">
-      <video src="videos/IMG_5134.mp4" controls="controls" autoplay loop>Can't play video</video>
-    </article>
-  </slide>
-
-  <slide class="fill nobackground" style="background-image: url(images/onlee/icpc2014_2.jpg)">
-    <hgroup>
-      <h2 class="white">Award @ ICPC Asia - Jakarta 2014</h2>
-    </hgroup>
-    <footer class="source white">"The 2014 ACM ICPC Regional Asia Jakarta" Facebook Page</footer>
-  </slide>
-
-  <slide>
-    <hgroup>
-      <h2>Skills</h2>
-      <h3></h3>
-    </hgroup>
-    <article class="no-margin-top text-center">
-      <img class="reflect margin-1em" src="images/games/skills.png">
-    </article>
-  </slide>
-
-  <slide class="fill nobackground" style="background-image: url(images/games/bbag.png)">
-    <hgroup>
-    </hgroup>
-  </slide>
-
-  <slide>
-    <hgroup>
-      <h2>Product Accomplishments</h2>
-      <h3>50+ projects</h3>
-    </hgroup>
-    <article class="no-margin-top text-center">
-      <img class="reflect margin-1em" src="images/games/projects.png">
-    </article>
-  </slide>
-
-  <slide class="segue dark nobackground">
-    <aside class="gdbar"><img src="images/gdp_labs_tiny.png"></aside>
-    <hgroup class="auto-fadein">
-      <h2>We're hiring!</h2>
-      <h3>apply to: <b>onlee@gdplabs.id</b> / <b>onlee@gdpventure.com</b></h3>
-      <a href="http://www.linkedin.com/in/onlee">http://www.linkedin.com/in/onlee</a>
-    </hgroup>
-  </slide>
-
-  <slide class="fill nobackground" style="background-image: url(images/we_went_gdc.jpg)">
-    <hgroup>
-      <h2 class="white">We Went to GDC 2014</h2>
-    </hgroup>
-
-    <aside class="note">
-      <section>
-        <ul>
-          <li>Last year, Ecky also came to this event and gave a guest lecture to UI GameDev class in October</li>
-        </ul>
-      </section>
-    </aside>
-  </slide>
-
-  <slide>
-    <hgroup>
-      <h2>GDC Overview</h2>
-    </hgroup>
-    <article class="flexbox vcenter" style="margin-top: 0">
-      <img class="reflect img-margin-btm" src="images/bg_header.png">
-      <ul>
-        <li>Largest conference for game developers in the world</li>
-        <li>Big companies & indie</li>
-        <li>Sessions, workshops, and expo covering all aspects of game industry</li>
-      </ul>
-    </article>
-    <aside class="note">
-      <section>
-        <ul>
-          <li>Some sessions run in parallel</li>
-          <li>Most sessions are recorded</li>
-        </ul>
-      </section>
-    </aside>
-  </slide>
-
-  <slide>
-    <hgroup>
-      <h2>Outline</h2>
-    </hgroup>
-    <article>
-      <ul>
-        <li>Lessons learned from GDC</li>
-        <li>Math for Game Programmers: Random Numbers</li>
-        <li>Expo</li>
-        <li>Experimental Gameplay Workshop (Demo)</li>
-        <li>Conclusion</li>
-        <li>Q & A</li>
-      </ul>
-    </article>
-    <aside class="note">
-      <section>
-        <ul>
-          <li>Due to high number of sessions, so we just pick one randomly, that is: Random Numbers</li>
-          <li>Most sessions are recorded contact us if you want specific videos</li>
-          <li>We will give a brief highlight of the expo</li>
-          <li>We will give a short demo about an experimental gameplay</li>
-          <li>We will close it with conclusion and Q&A</li>
-        </ul>
-      </section>
-    </aside>
-  </slide>
-
-  <slide class="segue dark nobackground">
-    <aside class="gdbar"><img src="images/gdp_labs_tiny.png"></aside>
-    <hgroup class="auto-fadein">
-      <h2>Lessons Learned</h2>
-      <h3>for Designing a Game</h3>
-    </hgroup>
-    <aside class="note">
-      <section>
-        <li>Let's start with Lessons Learned from GDC</li>
-      </section>
-    </aside>
-  </slide>
-
-  <slide>
-    <hgroup>
-      <h2>Paper Prototype</h2>
-      <h3>Lessons Learned</h3>
-    </hgroup>
-    <article>
-      <ul>
-        <li>Faster</li>
-        <li>Easily Modified</li>
-        <li>Cheap! Cost you almost nothing</li>
-      </ul>
-    </article>
-
-    <article class="image-right">
-      <img class="reflect" src="images/lesson/paper.png">
-    </article>
-  </slide>
-
-  <slide>
-    <hgroup>
-      <h2>Test! Need More Test!</h2>
-      <h3>Lessons Learned</h3>
-    </hgroup>
-    <article>
-      <ul>
-        <li>Although painful, it's required</li>
-        <li>User experience is one of the hardest</li>
-      </ul>
-    </article>
-
-    <article class="image-right">
-      <img class="reflect" src="images/lesson/test.png">
-    </article>
-
-    <aside class="note">
-      <section>
-        <ul>
-          <li>UX is the hardest to get the right <b>feels</b></li>
-          <li>The question is: ‘What’s the hardest thing on development’. It’s testing, well, we always need more tester that can give us feedback</li>
-        </ul>
-      </section>
-    </aside>
-  </slide>
-
-  <slide>
-    <hgroup>
-      <h2>Re-Roll for Desired Result</h2>
-    </hgroup>
-
-    <article>
-      <ul>
-        <li>Single random affect all result?</li>
-        <li>Controlled Random?</li>
-      </ul>
-
-      <ul>
-        <li>Answer: <b>it depends!</b></li>
-        <ul>
-          <li>How costly</li>
-          <li>How often will this hit fail?</li>
-        </ul>
-      </ul>
-    </article>
-
-    <article class="image-right">
-      <img class="reflect" src="images/random/scatter.png">
-    </article>
-  </slide>
-
-  <slide>
-    <hgroup>
-      <h2>Reloading State & Random</h2>
-    </hgroup>
-
-    <article>
-      <ul class="build">
-        <li>
-          Re-roll in encounter
-          <article class="smaller">
-            <ul>Allow state manipulation</ul>
-          </article>
-        </li>
-        <li>
-          Pre-roll (on initialize)
-          <article class="smaller">
-            <ul>Allow future prediction</ul>
-          </article>
-        </li>
-      </ul>
-    </article>
-  </slide>
-
-  <slide class="thank-you-slide segue nobackground">
-    <aside class="gdbar right"><img src="images/gdpla.png"></aside>
-    <article class="flexbox vleft auto-fadein">
-      <h2>&lt;Thank You!&gt;</h2>
-      <p>Questions or comments ?</p>
-    </article>
-    <p class="auto-fadein" data-config-contact>
-      <!-- populated from slide_config.json -->
-    </p>
   </slide>
 
   <slide class="backdrop"></slide>
